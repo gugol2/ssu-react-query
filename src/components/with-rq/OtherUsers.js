@@ -3,7 +3,7 @@ import useUsers from './useUsers';
 
 function OtherUsers(props) {
   const query = useUsers();
-  console.log('render');
+  console.log('render'); // RQ informs by default when the cache gets staled
   if (query.isLoading) {
     return <div>Cargando usuarios</div>;
   }

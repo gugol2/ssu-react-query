@@ -24,7 +24,10 @@ function UserForm(props) {
     onSettled: function() {
       console.log('final');
     },
+    
     onSuccess: function(response) {
+      console.log('success');
+
       queryClient.setQueryData('USERS', function(oldData) {
         return {
           ...oldData, 
@@ -38,8 +41,8 @@ function UserForm(props) {
           ]
         }
       })
-      console.log('success');
     },
+
     onError: function(error) {
       console.log('error');
     }

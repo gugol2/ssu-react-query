@@ -10,7 +10,7 @@ async function fetchUsers() {
 
 export default function useUsers() {
   return useQuery('USERS', fetchUsers, {
-    staleTime: 5000,
+    staleTime: 5000, // 'Infinity' is a valid value if we want forever cache
     notifyOnChangePropsExclusions: ['isStale'],
   });
 }
