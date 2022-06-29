@@ -1,10 +1,10 @@
 import {useState} from 'react';
 import {QueryClient, QueryClientProvider} from 'react-query';
-import './App.css';
 import Users from './with-rq/Users';
 import OtherUsers from './with-rq/OtherUsers';
 import UserForm from './with-rq/UserForm';
 import OldUsers from './without-rq/UsersClassic';
+import './App.css';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -21,8 +21,8 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <div className="App">
         <h1>Lista de usuarios</h1>
+
         <Users />
-        <OldUsers />
 
         <p>------------------</p>
 
@@ -32,6 +32,11 @@ function App() {
         <p>------------------</p>
 
         <UserForm />
+
+        <h1>Lista de usuarios Old way</h1>
+
+
+        <OldUsers />
       </div>
     </QueryClientProvider>
   );

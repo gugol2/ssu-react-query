@@ -16,14 +16,15 @@ function UsersClassic(props) {
   const handleRefetch = () => setrefetch(Math.random())
  
   return (
-     <div className="list-wrapper">
-        <div>Old way</div>
-        {data.map((user) => (
-           <li key={user.id}>{user.email}</li>
-        ))}
+   <div>
+      <ul>
+         {data.map((user) => (
+            <li key={user.id}>{user.email}</li>
+         ))}
+      </ul>
+      
       <button onClick={handleRefetch}>Refrescar</button>
-
-     </div>
+   </div>
   );
 }
 

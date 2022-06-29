@@ -3,7 +3,7 @@ import useUsers from './useUsers';
 
 function Users(props) {
   const {isLoading, data, error, isError, refetch} = useUsers();
-  
+
   if (isLoading) {
     return <div>Cargando usuarios</div>;
   }
@@ -19,6 +19,7 @@ function Users(props) {
           <li key={user.id}>{user.email}</li>
         ))}
       </ul>
+      
       <button onClick={refetch}>Refrescar</button>
     </div>
   );
