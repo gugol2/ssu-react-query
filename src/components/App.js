@@ -4,7 +4,7 @@ import './App.css';
 import Users from './with-rq/Users';
 import OtherUsers from './with-rq/OtherUsers';
 import UserForm from './with-rq/UserForm';
-import OldUsers from './without-rq/OldUsers';
+import OldUsers from './without-rq/UsersClassic';
 
 const queryClient = new QueryClient({
   defaultOptions: {

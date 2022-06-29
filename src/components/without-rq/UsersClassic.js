@@ -1,7 +1,7 @@
 import React from 'react';
 import useUsersClassic from './useUsersClassic';
 
-function OldUsers(props) {
+function UsersClassic(props) {
 
   const { data, status, errorMsg, setrefetch} = useUsersClassic()
  
@@ -27,4 +27,4 @@ function OldUsers(props) {
   );
 }
 
-export default OldUsers;
+export default UsersClassic;
