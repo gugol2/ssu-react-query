@@ -10,8 +10,8 @@ import './App.css';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      retry: 0,
-      refetchOnWindowFocus: false
+      // retry: 0, // number of attemps
+      // refetchOnWindowFocus: false
     },
   },
 });
@@ -27,7 +27,7 @@ function App() {
 
         <p>------------------</p>
 
-        <button onClick={() => setShow(true)}>Mostrar la misma lista otra vez</button>
+        <button onClick={() => setShow((currentShow) => !currentShow)}>Mostrar la misma lista otra vez</button>
         {show && <OtherUsers />}
 
         <p>------------------</p>
