@@ -24,23 +24,24 @@ function UserForm(props) {
     onSettled: function() {
       console.log('final');
     },
-    
+
     onSuccess: function(response) {
       console.log('success');
+      queryClient.invalidateQueries('USERS');
 
-      queryClient.setQueryData('USERS', function(oldData) {
-        return {
-          ...oldData, 
-          data: [
-            ...oldData.data,
-            {
-              id: response.id,
-              email: response.name,
-              job: response.job
-            }
-          ]
-        }
-      })
+      // queryClient.setQueryData('USERS', function(oldData) {
+      //   return {
+      //     ...oldData, 
+      //     data: [
+      //       ...oldData.data,
+      //       {
+      //         id: response.id,
+      //         email: response.name,
+      //         job: response.job
+      //       }
+      //     ]
+      //   }
+      // })
     },
 
     onError: function(error) {
