@@ -4,6 +4,7 @@ import Users from './with-rq/Users';
 import OtherUsers from './with-rq/OtherUsers';
 import UserForm from './with-rq/UserForm';
 import OldUsers from './without-rq/UsersClassic';
+import { ReactQueryDevtools } from 'react-query/devtools'
 import './App.css';
 
 const queryClient = new QueryClient({
@@ -38,6 +39,7 @@ function App() {
 
         <OldUsers />
       </div>
+      <ReactQueryDevtools initialIsOpen={false}  />
     </QueryClientProvider>
   );
 }
