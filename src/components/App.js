@@ -1,9 +1,9 @@
 import {useState} from 'react';
 import {QueryClient, QueryClientProvider} from 'react-query';
 import './App.css';
-import Users from './Users';
-import OtherUsers from './OtherUsers';
-import UserForm from './UserForm';
+import Users from './with-rq/Users';
+import OtherUsers from './with-rq/OtherUsers';
+import UserForm from './with-rq/UserForm';
 
 const queryClient = new QueryClient({
   defaultOptions: {
