@@ -4,6 +4,7 @@ import './App.css';
 import Users from './with-rq/Users';
 import OtherUsers from './with-rq/OtherUsers';
 import UserForm from './with-rq/UserForm';
+import OldUsers from './without-rq/OldUsers';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -21,8 +22,15 @@ function App() {
       <div className="App">
         <h1>Lista de usuarios</h1>
         <Users />
-        <button onClick={() => setShow(true)}>Mostrar</button>
+        <OldUsers />
+
+        <p>------------------</p>
+
+        <button onClick={() => setShow(true)}>Mostrar la misma lista otra vez</button>
         {show && <OtherUsers />}
+
+        <p>------------------</p>
+
         <UserForm />
       </div>
     </QueryClientProvider>
